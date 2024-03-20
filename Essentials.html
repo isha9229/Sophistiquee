@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <title>Wardrobe Essentials</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/homepage-main.css" />
+    <link rel="stylesheet" href="../CSS/footer.css" />
+    <link rel="stylesheet" href="../CSS/sidebar.css" />
+    <link rel="stylesheet" href="../CSS/signup-button.css" />
+    <title>Basics</title>
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      main {
+        background-color: #874a5b;
+      }
+      .section {
+        display: none;
+        padding: 1rem;
+
+        @media screen and (min-width: 768px) {
+          padding: 2rem;
+        }
+
+        @supports (display: grid) {
+          display: block;
+        }
+      }
+
+      h2 {
+        font-size: 2rem;
+        padding-left: 6%;
+        padding-bottom: 3%;
+        padding-top: 3%;
+        text-align: center;
+      }
+
+      .p {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 1.25rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-auto-flow: row dense;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        align-items: flex-start; /* Added property */
+      }
+
+      .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        background: #0c9a9a;
+        color: #fff;
+        grid-column-start: auto;
+        grid-row-start: auto;
+        color: #fff;
+        background-color: #874a5b;
+        background-size: cover;
+        background-position: center;
+        box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        counter-increment: item-counter;
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: black;
+          opacity: 0.25;
+          transition: opacity 0.3s ease-in-out;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+
+          &:after {
+            opacity: 0;
+          }
+        }
+
+        &--medium {
+          grid-row-end: span 2;
+        }
+
+        &--large {
+          grid-row-end: span 3;
+        }
+
+        &--full {
+          grid-column-end: auto;
+
+          @media screen and (min-width: 768px) {
+            grid-column: 1/-1;
+            grid-row-end: span 2;
+          }
+        }
+
+        &__details {
+          position: relative;
+          z-index: 1;
+          padding: 15px;
+          color: #444;
+          background: #fff;
+          text-transform: lowercase;
+          letter-spacing: 1px;
+          color: #828282;
+
+          &:before {
+            content: counter(item-counter);
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding-right: 0.5em;
+            color: #444;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="sidebar close">
+        <div class="logo-details">
+          <span class="logo_name">Sophistiquée</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class="fa-solid fa-house-user"></i>
+
+                <span class="link_name">Home</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a class="link_name" href="Home.html">Home</a></li>
+              <li><a href="Womanss.html">Women's</a></li>
+              <li><a href="#">Men's</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="Essentials.html" target="_blank">
+              <i class="fa-solid fa-shirt"></i>
+              <span class="link_name">Wardrobe Essentials</span>
+            </a>
+          </li>
+          <li>
+            <a href="Seasonal.html" target="_blank">
+              <i class="fa-regular fa-snowflake"></i>
+              <span class="link_name">Seasonals</span>
+            </a>
+          </li>
+          <li>
+            <a href="PalettePro.html" target="_blank">
+              <i class="fa-solid fa-palette"></i>
+              <span class="link_name">PalettePro</span>
+            </a>
+          </li>
+          <li>
+            <a href="KnowYourBody.html" target="_blank">
+              <i class="fa-solid fa-child"></i>
+              <span class="link_name">KnowYourBody</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="profile-details">
+              <div class="profile-content">
+                <!--<img src="image/profile.jpg" alt="profileImg">-->
+              </div>
+              <div class="name-job">
+                <div class="profile_name">Sign up</div>
+                <div class="job">Web Desginer</div>
+              </div>
+              <li>
+                <div class="profile-details">
+                  <div class="profile-content">
+                    <!--<img src="image/profile.jpg" alt="profileImg">-->
+                  </div>
+                  <div class="name-job">
+                    <div class="profile_name">Sign up</div>
+                    <div class="job">Fashion Assistant</div>
+                  </div>
+                  <i class="bx bx-log-out"></i>
+                </div>
+              </li>
+            </div>
+            <!-- Sidebar toggle button (cross icon) -->
+            <div class="sidebar-toggle">
+              <i class="fa-solid fa-xmark fa-2xl" style="color: #fff"></i>
+            </div>
+
+            <section class="home-section">
+              <div class="home-content">
+                <i class="bx bx-menu"></i>
+                <i
+                  class="fa-solid fa-magnifying-glass fa-lg"
+                  style="color: #f9f5f5"
+                ></i>
+                <div class="website-name">
+                  <h1>Sophistiquée</h1>
+                </div>
+                <div class="button">
+                  <a href="Signup.html">
+                    <button>
+                      <span>Sign Up</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="social-media-buttons">
+                <main></main>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    let arrow = document.querySelectorAll(".arrow");
+                    for (let i = 0; i < arrow.length; i++) {
+                      arrow[i].addEventListener("click", (e) => {
+                        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                        arrowParent.classList.toggle("showMenu");
+                      });
+                    }
+
+                    let sidebar = document.querySelector(".sidebar");
+                    let sidebarBtn = document.querySelectorAll(
+                      ".bx-menu, .sidebar-toggle"
+                    );
+                    for (let i = 0; i < sidebarBtn.length; i++) {
+                      sidebarBtn[i].addEventListener("click", () => {
+                        sidebar.classList.toggle("close");
+
+                        // Add a delay before showing/hiding the cross icon
+                        setTimeout(function () {
+                          let crossIcon =
+                            document.querySelector(".sidebar-toggle");
+                          if (sidebar.classList.contains("close")) {
+                            crossIcon.style.display = "none";
+                          } else {
+                            crossIcon.style.display = "block";
+                          }
+                        }, 200); // Adjust the delay time (in milliseconds) as needed
+
+                        let homeContent =
+                          document.querySelector(".home-section");
+                        if (sidebar.classList.contains("close")) {
+                          homeContent.classList.remove("blurred");
+                        } else {
+                          homeContent.classList.add("blurred");
+                        }
+                      });
+                    }
+                  });
+                </script>
+              </div>
+              <main>
+                <centre><h2>Wardrobe Essentials</h2></centre>
+                <div class="p">
+                  <p>
+                    Banish the 'nothing to wear' dilemma forever with our
+                    carefully curated wardrobe essentials. Each piece is
+                    meticulously selected to effortlessly pair with any other,
+                    ensuring that every combination exudes style and
+                    sophistication. From a casual day out to a formal evening
+                    affair, our essentials seamlessly transition to create a
+                    multitude of stunning outfits. With our wardrobe essentials,
+                    you'll never have to worry about mixing and matching again,
+                    as every piece is designed to complement and enhance your
+                    personal style.
+                  </p>
+                </div>
+                <div class="section">
+                  <h2>The Basics</h2>
+                  <div class="grid">
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/ed/f9/76/edf976e10981beb697d07096bb344c10.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/5f/3d/61/5f3d6133e88c3f316abd3c4ad0824e1e.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/50/ec/74/50ec74529227b15fac67f6168671f701.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/7d/5d/ad/7d5dadae500da8626280c7493e959878.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/13/b8/aa/13b8aafd74af0cf3b33f07e86d36a218.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/df/a4/0b/dfa40bdcf7a9e5d87398f50e86c38952.jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/6c/70/2b/6c702bc12a24f8b9f4289425d6053152.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/a0/c1/fc/a0c1fc5feaea4fe267bf26d5f6704939.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/86/4b/6e/864b6ea85b48e105287bd98a442aafcd.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/48/96/10/489610a8b3cc5e9fdaf30aeb557c1b18.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/70/05/ad/7005ade5e8bfed24cf9393b57326ee5d.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/e9/d4/42/e9d44240ad82110e85428cb455bd3bcf.jpg"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </main>
+              <body>
+                                <!-- Site footer -->
+                <footer class="site-footer">
+                  <div class="container">
+                    <div class="row">
+                      <div class="About">
+                        <h6>About</h6>
+                        <p class="text-justify">
+                          Welcome to <i>Sophistquee</i>, your go-to source for
+                          all things fashion! <br />
+                          Founded by Prachi and Isha, we're passionate about
+                          helping you discover your unique style. From the
+                          latest trends to timeless classics, we're here to
+                          inspire and empower you on your fashion journey.
+                          <br />
+                          Join us as we explore the art of self-expression
+                          through style, and let's make fashion fun and
+                          accessible for everyone!
+                          <br />
+                          <br />
+                          Contact Us: <br />
+                          isha.sharma@christcollegepune.org <br />
+                          prachi.agarwal@christcollegepune.org
+                        </p>
+                      </div>
+
+                      <div class="Categories">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                          <li>
+                            <a href="/trial.html" target="_blank">Home</a>
+                          </li>
+                          <li>
+                            <a
+                              href="/PalettePro/PalettePro.html"
+                              target="_blank"
+                              >Palette Pro</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/KnowYourBody.html" target="_blank"
+                              >Know Your Body</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/Essentials/Essentials.html"
+                              target="_blank"
+                              >Essentials</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/Seasonals/Seasonal.html" target="_blank"
+                              >Seasonals</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/FashionVocab.html" target="_blank"
+                              >Fashion Vocab</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="Quick Links">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                          <li>
+                            <a href="/ABOUTUS.html" target="_blank">About Us</a>
+                          </li>
+                          <li>
+                            <a href="/RateUs.html" target="_blank">Rate Us</a>
+                          </li>
+                          <li>
+                            <a href="/Feedback.html" target="_blank"
+                              >Feedback</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/Signup.html" target="_blank"
+                              >Sign up/Sign in</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/Get_Premium.html" target="_blank"
+                              >Get Premium</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">
+                          Copyright &copy; 2023 All Rights Reserved.
+                        </p>
+                      </div>
+
+                      <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="footer-social-icons">
+                          <li>
+                            <a class="facebook" href="#">
+                              <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="pinterest" href="#"
+                              ><i class="fa-brands fa-pinterest-p"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a class="dribbble" href="#">
+                              <i class="fa-brands fa-instagram"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a class="linkedin" href="#"
+                              ><i class="fa-brands fa-twitter"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </footer></body>
+            </section>
+          </li>
+        </ul>
+      </div>
+    </header>
+  </body>
+</html>

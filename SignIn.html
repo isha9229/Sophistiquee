@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sign In</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #050606; /* Black background for the body */
+        color: #e3cdbc; /* #fffffe text color for the body */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        text-align: center; /* Center text in the body */
+      }
+
+      h2 {
+        margin-top: 70px; /* Add more space above the heading */
+        font-size: 40px;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 40px auto; /* Center the form and add more space */
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #050606; /* Black background for the form */
+        color: #e3cdbc; /* White text color for the form */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a glassy effect */
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 88%;
+        padding: 10px;
+        margin: 15px 0 20px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+        background-color: #ecf1eb;
+      }
+      .checkbox {
+        text-align: left;
+        margin-bottom: 15px;
+      }
+
+      button {
+        width: 60%;
+        font-weight: 550;
+        padding: 10px;
+        margin-top: 40px;
+        border: none;
+        border-radius: 3px;
+        background-color: #874a5b;
+        color: #e3cdbc;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .sign-in-container {
+        display: none;
+        margin-top: 20px;
+      }
+
+      .sign-in-container.active {
+        display: block; /* Show the sign-in container when active */
+      }
+
+      .sign-up-container.active {
+        display: none; /* Hide the sign-up container when active */
+      }
+
+      .signup {
+        margin-top: 20px;
+      }
+
+      .signup a {
+        text-decoration: none;
+        color: #e3cdbc;
+      }
+
+      .signup a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container sign-up-container">
+      <h2>Sign In</h2>
+      <form action="/submit_signup_form" method="post">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          pattern="[A-Za-z]+"
+          title="Username must contain only alphabetic characters"
+          required
+        />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          pattern="(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.\W).{8,}"
+          title="Password must be at least 8 characters long and contain at least one number, one special character, one uppercase letter, and one lowercase letter"
+          required
+        />
+        <div class="checkbox">
+          <label
+            ><input type="checkbox" id="rememberMe" name="rememberMe" />
+            Remember Me</label
+          >
+        </div>
+        <button type="submit">Sign in</button>
+      </form>
+      <div class="signup">
+        <p>
+          Not a member yet?
+          <a href="Signup.html">Sign Up!</a>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var showSignInLink = document.getElementById("showSignIn");
+      var showSignUpLink = document.getElementById("showSignUp");
+      var signInContainer = document.querySelector(".sign-in-container");
+      var signUpContainer = document.querySelector(".sign-up-container");
+
+      showSignInLink.addEventListener("click", function () {
+        signInContainer.classList.add("active");
+        signUpContainer.classList.remove("active");
+      });
+
+      showSignUpLink.addEventListener("click", function () {
+        signInContainer.classList.remove("active");
+        signUpContainer.classList.add("active");
+      });
+
+      var showPasswordCheckbox = document.getElementById("showPassword");
+      var passwordField = document.getElementById("password");
+
+      showPasswordCheckbox.addEventListener("change", function () {
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+        } else {
+          passwordField.type = "password";
+        }
+      });
+    </script>
+  </body>
+</html>

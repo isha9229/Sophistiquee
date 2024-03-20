@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/homepage-main.css" />
+    <link rel="stylesheet" href="../CSS/sidebar.css" />
+    <link rel="stylesheet" href="../CSS/footer.css" />
+    <link rel="stylesheet" href="../CSS/signup-button.css" />
+    <title>Seasonals</title>
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      main {
+        background-color: #874a5b;
+      }
+      .section {
+        display: none;
+        padding: 1rem;
+
+        @media screen and (min-width: 768px) {
+          padding: 4rem;
+        }
+
+        @supports (display: grid) {
+          display: block;
+        }
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-flow: row dense;
+        padding-left: 4rem;
+        align-items: flex-start; /* Added property */
+      }
+
+      .item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        background: #0c9a9a;
+        color: #fff;
+        grid-column-start: auto;
+        grid-row-start: auto;
+        color: #fff;
+        background-color: #874a5b;
+        background-size: cover;
+        background-position: center;
+        box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        counter-increment: item-counter;
+        width: calc(
+          70% - 5px
+        ); /* Adjust the width based on the number of items */
+        margin-right: 20px; /* Adjust the margin between items */
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: black;
+          opacity: 0.25;
+          transition: opacity 0.3s ease-in-out;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+
+          &:after {
+            opacity: 0;
+          }
+        }
+
+        &__details {
+          position: relative;
+          z-index: 1;
+          padding: 15px;
+          color: #444;
+          background: #fff;
+          text-transform: lowercase;
+          letter-spacing: 1px;
+          color: #828282;
+
+          &:before {
+            content: counter(item-counter);
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding-right: 0.5em;
+            color: #444;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            max-height: 300px; /* Adjust the maximum height as needed */
+          }
+        }
+      }
+      .text-overlay {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-size: 2cap;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+
+  <header>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <span class="logo_name">Sophistiquée</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <div class="iocn-link">
+            <a href="trial.html">
+              <i class="fa-solid fa-house-user"></i>
+
+              <span class="link_name">Home</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="Home.html">Home</a></li>
+            <li><a href="Womanss.html">Women's</a></li>
+            <li><a href="#">Men's</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="Essentials.html" target="_blank">
+            <i class="fa-solid fa-shirt"></i>
+            <span class="link_name">Wardrobe Essentials</span>
+          </a>
+        </li>
+        <li>
+          <a href="Seasonal.html" target="_blank">
+            <i class="fa-regular fa-snowflake"></i>
+            <span class="link_name">Seasonals</span>
+          </a>
+        </li>
+        <li>
+          <a href="PalettePro.html" target="_blank">
+            <i class="fa-solid fa-palette"></i>
+            <span class="link_name">PalettePro</span>
+          </a>
+        </li>
+        <li>
+          <a href="KnowYourBody.html" target="_blank">
+            <i class="fa-solid fa-child"></i>
+            <span class="link_name">KnowYourBody</span>
+          </a>
+        </li>
+
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <!--<img src="image/profile.jpg" alt="profileImg">-->
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Sign up</div>
+              <div class="job">Web Desginer</div>
+            </div>
+            <li>
+              <div class="profile-details">
+                <div class="profile-content">
+                  <!--<img src="image/profile.jpg" alt="profileImg">-->
+                </div>
+                <div class="name-job">
+                  <div class="profile_name">Sign up</div>
+                  <div class="job">Fashion Assistant</div>
+                </div>
+                <i class="bx bx-log-out"></i>
+              </div>
+            </li>
+          </div>
+          <!-- Sidebar toggle button (cross icon) -->
+          <div class="sidebar-toggle">
+            <i class="fa-solid fa-xmark fa-2xl" style="color: #fff"></i>
+          </div>
+          <section class="home-section">
+            <div class="home-content">
+              <i class="bx bx-menu"></i>
+              <i
+                class="fa-solid fa-magnifying-glass fa-lg"
+                style="color: #f9f5f5"
+              ></i>
+              <div class="website-name">
+                <h1>Sophistiquée</h1>
+              </div>
+              <div class="button">
+                <a href="Signup.html">
+                  <button>
+                    <span>Sign Up</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <div class="social-media-buttons">
+              <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                  let arrow = document.querySelectorAll(".arrow");
+                  for (let i = 0; i < arrow.length; i++) {
+                    arrow[i].addEventListener("click", (e) => {
+                      let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                      arrowParent.classList.toggle("showMenu");
+                    });
+                  }
+
+                  let sidebar = document.querySelector(".sidebar");
+                  let sidebarBtn = document.querySelectorAll(
+                    ".bx-menu, .sidebar-toggle"
+                  );
+                  for (let i = 0; i < sidebarBtn.length; i++) {
+                    sidebarBtn[i].addEventListener("click", () => {
+                      sidebar.classList.toggle("close");
+
+                      // Add a delay before showing/hiding the cross icon
+                      setTimeout(function () {
+                        let crossIcon =
+                          document.querySelector(".sidebar-toggle");
+                        if (sidebar.classList.contains("close")) {
+                          crossIcon.style.display = "none";
+                        } else {
+                          crossIcon.style.display = "block";
+                        }
+                      }, 200); // Adjust the delay time (in milliseconds) as needed
+
+                      let homeContent = document.querySelector(".home-section");
+                      if (sidebar.classList.contains("close")) {
+                        homeContent.classList.remove("blurred");
+                      } else {
+                        homeContent.classList.add("blurred");
+                      }
+                    });
+                  }
+                });
+              </script>
+            </div>
+            <main>
+              <div class="section">
+                <div class="grid">
+                  <a href="Winter.html" target="_blank">
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/31/3e/57/313e57dc580b6ef85bfb705180a74874.jpg"
+                        alt="WF_1"
+                        width="100%"
+                      />
+                      <div class="text-overlay">Winter</div>
+                    </div>
+                  </a>
+                  <a href="Summer.html" target="_blank">
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/736x/27/fc/ab/27fcab30ec27cc1a0742dd4dd8081c66.jpg"
+                        alt=""
+                        width="100%"
+                      />
+                      <div class="text-overlay">Summer</div>
+                    </div>
+                  </a>
+                  <a href="Monsoon.html" target="_blank">
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/4a/dd/89/4add894f147d5032bb87692918ff0652.jpg"
+                        alt=""
+                        width="100%"
+                      />
+                      <div class="text-overlay">Monsoon</div>
+                    </div>
+                  </a>
+                  <a href="Spring.html" target="_blank">
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/d7/ce/ac/d7ceacd957e09ae709ee60d3f851d702.jpg"
+                        alt=""
+                        width="100%"
+                      />
+                      <div class="text-overlay">Spring</div>
+                    </div>
+                  </a>
+                  <a href="Autumn.html" target="_blank">
+                    <div class="item">
+                      <img
+                        src="https://i.pinimg.com/564x/8d/8a/4f/8d8a4fd825b91ce115796cc5f84c59a9.jpg"
+                        alt=""
+                        width="100%"
+                      />
+                      <div class="text-overlay">Autumn</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </main>
+            <script>
+              let currentSlide = 0;
+              const totalSlides = document.querySelectorAll(".slide").length;
+
+              function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateSlider();
+              }
+
+              function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlider();
+              }
+
+              function updateSlider() {
+                const container = document.querySelector(".container");
+                container.style.transform = `translateX(-${
+                  currentSlide * 100
+                }vw)`;
+              }
+            </script>
+
+            <body>
+                              <!-- Site footer -->
+                              <footer class="site-footer">
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="About">
+                                      <h6>About</h6>
+                                      <p class="text-justify">
+                                        Welcome to <i>Sophistquee</i>, your go-to source for
+                                        all things fashion! <br />
+                                        Founded by Prachi and Isha, we're passionate about
+                                        helping you discover your unique style. From the
+                                        latest trends to timeless classics, we're here to
+                                        inspire and empower you on your fashion journey.
+                                        <br />
+                                        Join us as we explore the art of self-expression
+                                        through style, and let's make fashion fun and
+                                        accessible for everyone!
+                                        <br />
+                                        <br />
+                                        Contact Us: <br />
+                                        isha.sharma@christcollegepune.org <br />
+                                        prachi.agarwal@christcollegepune.org
+                                      </p>
+                                    </div>
+              
+                                    <div class="Categories">
+                                      <h6>Categories</h6>
+                                      <ul class="footer-links">
+                                        <li>
+                                          <a href="/trial.html" target="_blank">Home</a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            href="/PalettePro/PalettePro.html"
+                                            target="_blank"
+                                            >Palette Pro</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a href="/KnowYourBody.html" target="_blank"
+                                            >Know Your Body</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a
+                                            href="/Essentials/Essentials.html"
+                                            target="_blank"
+                                            >Essentials</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a href="/Seasonals/Seasonal.html" target="_blank"
+                                            >Seasonals</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a href="/FashionVocab.html" target="_blank"
+                                            >Fashion Vocab</a
+                                          >
+                                        </li>
+                                      </ul>
+                                    </div>
+              
+                                    <div class="Quick Links">
+                                      <h6>Quick Links</h6>
+                                      <ul class="footer-links">
+                                        <li>
+                                          <a href="/ABOUTUS.html" target="_blank">About Us</a>
+                                        </li>
+                                        <li>
+                                          <a href="/RateUs.html" target="_blank">Rate Us</a>
+                                        </li>
+                                        <li>
+                                          <a href="/Feedback.html" target="_blank"
+                                            >Feedback</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a href="/Signup.html" target="_blank"
+                                            >Sign up/Sign in</a
+                                          >
+                                        </li>
+                                        <li>
+                                          <a href="/Get_Premium.html" target="_blank"
+                                            >Get Premium</a
+                                          >
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <hr />
+                                </div>
+                                <div class="container">
+                                  <div class="row">
+                                    <div class="col-md-8 col-sm-6 col-xs-12">
+                                      <p class="copyright-text">
+                                        Copyright &copy; 2023 All Rights Reserved.
+                                      </p>
+                                    </div>
+              
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
+                                      <ul class="footer-social-icons">
+                                        <li>
+                                          <a class="facebook" href="#">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a class="pinterest" href="#"
+                                            ><i class="fa-brands fa-pinterest-p"></i
+                                          ></a>
+                                        </li>
+                                        <li>
+                                          <a class="dribbble" href="#">
+                                            <i class="fa-brands fa-instagram"></i
+                                          ></a>
+                                        </li>
+                                        <li>
+                                          <a class="linkedin" href="#"
+                                            ><i class="fa-brands fa-twitter"></i
+                                          ></a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </footer>            </body>
+          </section>
+        </li>
+      </ul>
+    </div>
+  </header>
+</html>

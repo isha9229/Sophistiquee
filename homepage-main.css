@@ -1,0 +1,40 @@
+main {
+  background-color: #874a5b;
+}
+.outfit-container {
+  display: flex;
+  padding-top: 3%;
+}
+.men,
+.women {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  padding-bottom: 5%;
+}
+.men {
+  padding-left: 2%;
+  padding-right: 3%;
+}
+.women {
+  padding-right: 2%;
+  padding-left: 3%;
+}
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.text-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 6cap;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* main content */

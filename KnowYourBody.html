@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/homepage-main.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
+    <link rel="stylesheet" href="CSS/sidebar.css" />
+    <link rel="stylesheet" href="CSS/signup-button.css" />
+    <title>Know Your Body</title>
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      main {
+        background-color: #874a5b;
+        margin-left: 7px;
+      }
+      h2 {
+        align-items: center;
+        justify-content: center;
+      }
+      form {
+        max-width: 380px;
+        margin: 0 auto;
+        padding-top: 2%;
+        align-items: right;
+        justify-content: right;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      select,
+      input[type="checkbox"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #e3cdbc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .check > button {
+        background-color: #e3cdbc;
+        align-items: center;
+        justify-content: center;
+        color: #874a5b;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      check:hover {
+        background-color: #45a049;
+      }
+      .bodytype {
+        display: flex;
+        padding-bottom: 10%;
+      }
+      #result {
+        margin-top: 2%;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+      }
+      #bodyTypeImage {
+        margin-top: 5%;
+        margin-left: 8%;
+        max-width: 30%;
+        height: auto;
+      }
+      #descp {
+        margin-top: 8%;
+        padding: 2%;
+        color: #e3cdbc;
+        font-size: 1rem;
+      }
+      .clothesImage {
+        max-width: 100px;
+        height: auto;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="sidebar close">
+        <div class="logo-details">
+          <span class="logo_name">Sophistiquée</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <div class="iocn-link">
+              <a href="trial.html">
+                <i class="fa-solid fa-house-user"></i>
+
+                <span class="link_name">Home</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a class="link_name" href="Home.html">Home</a></li>
+              <li><a href="Womanss.html">Women's</a></li>
+              <li><a href="#">Men's</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="Essentials.html" target="_blank">
+              <i class="fa-solid fa-shirt"></i>
+              <span class="link_name">Wardrobe Essentials</span>
+            </a>
+          </li>
+          <li>
+            <a href="Seasonal.html" target="_blank">
+              <i class="fa-regular fa-snowflake"></i>
+              <span class="link_name">Seasonals</span>
+            </a>
+          </li>
+          <li>
+            <a href="PalettePro.html" target="_blank">
+              <i class="fa-solid fa-palette"></i>
+              <span class="link_name">PalettePro</span>
+            </a>
+          </li>
+          <li>
+            <a href="KnowYourBody.html" target="_blank">
+              <i class="fa-solid fa-child"></i>
+              <span class="link_name">KnowYourBody</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="profile-details">
+              <div class="profile-content">
+                <!--<img src="image/profile.jpg" alt="profileImg">-->
+              </div>
+              <div class="name-job">
+                <div class="profile_name">Sign up</div>
+                <div class="job">Web Desginer</div>
+              </div>
+              <li>
+                <div class="profile-details">
+                  <div class="profile-content">
+                    <!--<img src="image/profile.jpg" alt="profileImg">-->
+                  </div>
+                  <div class="name-job">
+                    <div class="profile_name">Sign up</div>
+                    <div class="job">Fashion Assistant</div>
+                  </div>
+                  <i class="bx bx-log-out"></i>
+                </div>
+              </li>
+            </div>
+            <!-- Sidebar toggle button (cross icon) -->
+            <div class="sidebar-toggle">
+              <i class="fa-solid fa-xmark fa-2xl" style="color: #fff"></i>
+            </div>
+
+            <section class="home-section">
+              <div class="home-content">
+                <i class="bx bx-menu"></i>
+                <i
+                  class="fa-solid fa-magnifying-glass fa-lg"
+                  style="color: #f9f5f5"
+                ></i>
+                <div class="website-name">
+                  <h1>Sophistiquée</h1>
+                </div>
+                <div class="button">
+                  <a href="Signup.html">
+                    <button>
+                      <span>Sign Up</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="social-media-buttons">
+                <main></main>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    let arrow = document.querySelectorAll(".arrow");
+                    for (let i = 0; i < arrow.length; i++) {
+                      arrow[i].addEventListener("click", (e) => {
+                        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                        arrowParent.classList.toggle("showMenu");
+                      });
+                    }
+
+                    let sidebar = document.querySelector(".sidebar");
+                    let sidebarBtn = document.querySelectorAll(
+                      ".bx-menu, .sidebar-toggle"
+                    );
+                    for (let i = 0; i < sidebarBtn.length; i++) {
+                      sidebarBtn[i].addEventListener("click", () => {
+                        sidebar.classList.toggle("close");
+
+                        // Add a delay before showing/hiding the cross icon
+                        setTimeout(function () {
+                          let crossIcon =
+                            document.querySelector(".sidebar-toggle");
+                          if (sidebar.classList.contains("close")) {
+                            crossIcon.style.display = "none";
+                          } else {
+                            crossIcon.style.display = "block";
+                          }
+                        }, 200); // Adjust the delay time (in milliseconds) as needed
+
+                        let homeContent =
+                          document.querySelector(".home-section");
+                        if (sidebar.classList.contains("close")) {
+                          homeContent.classList.remove("blurred");
+                        } else {
+                          homeContent.classList.add("blurred");
+                        }
+                      });
+                    }
+                  });
+                </script>
+              </div>
+              <main>
+                <form id="bodyTypeForm">
+                  <h2>Enter your Measurements</h2>
+                  <label for="shoulder">Shoulder to Shoulder:</label>
+                  <select id="shoulder" name="shoulder">
+                    <option value="narrow">Narrow</option>
+                    <option value="average">Average</option>
+                    <option value="broad">Broad</option>
+                  </select>
+
+                  <label for="bust">Bust:</label>
+                  <select id="bust" name="bust">
+                    <option value="small">Small</option>
+                    <option value="average">Average</option>
+                    <option value="large">Large</option>
+                  </select>
+
+                  <label for="waist">Waist:</label>
+                  <select id="waist" name="waist">
+                    <option value="small">Small</option>
+                    <option value="average">Average</option>
+                    <option value="large">Large</option>
+                  </select>
+
+                  <label for="hips">Hips:</label>
+                  <select id="hips" name="hips">
+                    <option value="small">Small</option>
+                    <option value="average">Average</option>
+                    <option value="large">Large</option>
+                  </select>
+                  <div class="check">
+                    <button type="button" onclick="calculateBodyType()">
+                      Know Body Type
+                    </button>
+                  </div>
+                </form>
+
+                <div id="result"></div>
+                <div class="bodytype">
+                  <img id="bodyTypeImage" src="" alt="" />
+                  <div id="descp"></div>
+                  <div id="clothesImages"></div>
+                </div>
+                <script>
+                  function calculateBodyType() {
+                    var gender = document.querySelector(
+                      'input[name="gender"]:checked'
+                    );
+                    var shoulder = document.getElementById("shoulder").value;
+                    var bust = document.getElementById("bust").value;
+                    var waist = document.getElementById("waist").value;
+                    var hips = document.getElementById("hips").value;
+
+                    if (shoulder && bust && waist && hips) {
+                      var bodyType = "";
+                      var descp = "";
+
+                      // Determine body type based on measurements
+                      if (
+                        (shoulder === "broad" || shoulder === "average") &&
+                        (bust === "large" || bust === "average") &&
+                        waist === "small" &&
+                        (hips === "large" || hips === "average")
+                      ) {
+                        bodyType = "Hourglass";
+                        descp =
+                          "the key is to emphasize the waist while balancing your upper and lower body.\n\nWomens:\nTops: \nWrap Tops, V-neck or scoop neck tops, fitted shirts or blouses that cinch at the waist and peplum tops.\nBottoms:\n High-waisted jeans or trousers, A-line skirts, Pencil skirts and bootcut or flared jeans.\nDresses:\n Wrap dresses, A-line dresses, Fit and Flare dresses and Belted dresses.\n\nMens: \nTops: \nFitted shirts that tapper at the waist, V-neck or scoop necks and Tailored dress shirts. \nBottoms: \nStraight-leg or bootcut jeans, Chinos or dress trousers with slight tapers and overly tight or baggy pants. \nSuits: \nTailored suits or blazers that define the waist and avoid boxy or shapeless styles. \n\nAccessories For Both the Genders: \nBelts to cinch to waist, Statement jwellery to draw attention upward, scarves or ties to add visual interest to the upper body and avoid overly wide waist that may overwhelm your waist.";
+                        imageSrc =
+                          "https://i.pinimg.com/564x/7e/d0/c3/7ed0c339026c1a171ff81f028a1ea3fa.jpg";
+                      } else if (
+                        shoulder === "narrow" &&
+                        bust === "small" &&
+                        waist === "average" &&
+                        hips === "large"
+                      ) {
+                        bodyType = "Triangle";
+                        descp =
+                          "also known as pear-shaped, the aim is to balance your proportions by adding volume to your upper body while emphasizing your waist.\n\nWomens:\nTops:\nBoat neck tops, off-the-shoulder tops, Halter neck tops and Ruffled or Embellished tops.\nBottoms:\nA-line skirts, High-waisted trousers or jeans, wide-legged pants and avoid skinny jeans or pencil skirts that accentuate the hips.\nDresses:\nA-line dresses, Fit and Flare dresses, Empire waist dresses and Wrap dresses.\n\nMens:\nTops:\nLight - colored tops, Boat neck or Wide neck tops, patterns or details on the upper body and avoid tight fitting tops that emphazise the hips.\nBottoms:\nStraight-leg or slightly tappered trousers, light-colored pants, cargo pants or shorts with pockets on the thights and avoid tight or skinning jeans that emphazise the hips \nSuits:\nTailored suits with structured shoulders, blazers with shoulder padding and avoid boxy and shapeless styles that add bulk to the lower body.\n\nAccessories For Both Genders:\nStatement necklace or earings to draw attention upward, scarves or ties to add volume to the upper vody, belts to cinch the waist and avoid heavy or bulky accessories around the hips. ";
+                        imageSrc =
+                          "https://i.pinimg.com/564x/e5/69/0c/e5690c5e10b720ae8dc2abcf93269c5b.jpg";
+                      } else if (
+                        shoulder === "average" &&
+                        bust === "average" &&
+                        waist === "average" &&
+                        hips === "average"
+                      ) {
+                        bodyType = "Rectangle";
+                        descp =
+                          ",the goal is to create the illusion of curves by defining the waist and adding volume to either the upper or the lower body.\n\nWomens:\nTops:\nPeplum tops, wrap tops, Ruffled or Embellished tops and Tops with sweetheart or scoop necklines.\nBottoms:\nHigh-waisted skirts, a-line skirts, bootcut or flared jeans and wide-legged pants.\nDresses:\nWrap dresses, Belted dresses, Fit and flare dresses and dresses with ruching and gathering at the waist.\n\nMens:\nTops:\nFitted shirts that tapper at the waist, v-neck or scoop neck shirts. shirts with horizontal strips or patterns and avoid boxy and shapeless styles.\nBottoms:\nStraight-leg or bootcut jeans, Chinos or dress trousers with a slight tapper, Cargo pants and avoid skinny jeans.\nSuits:\nTailored suits with structured shoulders, blazers with waist suppresion and avoid boxy or straight cut styles.\n\nAccessories for Both Genders:\nBelts to define the waist, Statement jwellery to add interest to the upper body, scarves and ties to create the illusion of curves and avoid bulky accessories that may overwhelm a straight silhouette.";
+                        imageSrc =
+                          "https://i.pinimg.com/564x/e6/16/68/e61668bbd3056c81d0f16a9e652a846f.jpg";
+                      } else if (
+                        shoulder === "broad" &&
+                        bust === "large" &&
+                        waist === "large" &&
+                        hips === "large"
+                      ) {
+                        bodyType = "Round";
+                        descp =
+                          "also known as apple-shaped, the goal is to elongate the torso and create a balanced silhouette by emphasizing your best features.\n\nWomens:\nTops:\nV-neck tops, Wrap tops, Empire waist tops and peplum tops.\nBottoms:\nHigh-waisted trousers or jeans, bootcut or flared jeans, a-line skirts and dark-colored bottoms.\nDresses:\nEmpire waist dresses. a-line dresses, wrap dresses and shift dresses.\n\nMens:\nTops:\nV-neck or open collor shirts, shirts with vertical strips or patterns, tailoerd shirts and avoid tight-fitting ot boxy tops.\nBottoms:\nStraight-legged trousers or jeans, Chinos with slight tapper and avoid overly tight ot baggy pants.\nSuits:\nTailored suits with structured shoulders, Blazers with waist suppression and Avoid boxy or shapless styles.\n\nAccessories For Both the Genders:\nStatement jwellery to draw attention upward, belts worn at the smallest parts of the waist, scarves or ties to add vertical lines and avoid bulky accessories that add volume to the midsection.";
+                        imageSrc =
+                          "https://i.pinimg.com/564x/29/85/db/2985db2ed330fb70fb20a0678a696415.jpg";
+                      } else if (
+                        shoulder === "broad" &&
+                        bust === "large" &&
+                        waist === "average" &&
+                        hips === "small"
+                      ) {
+                        bodyType = "Inverted Triangle";
+
+                        descp =
+                          ",the goal is to balance the broad shoulders and narrow hips by drawing attenyion downward and adding volume to the lower body.\n\nWomens:\nTops:\nV-neck or scoop neck tops, Wrap tops, Off-the-shoulder tops and tops with detailing at the waist.\nBottoms:\nHigh-waisted trousers or jeans, wide-legged pants, a-line skirts and flared or bootcut jeans.\nDresses:\nA-line dresses, wrap dresses, dresses with detailing at the aist and empire waist dresses.\nMens:\nTops: V-neck or scoop neck shirts, Shirts with horizontal strips or patterns, tailored shirts that taper at the waist and avoid boat neck or wide neck tops that accentuate the shoulders.\nBottoms:\nStraight-leg or slightly tappered trousers, Chinos or dress trousers and avoid skinny jeans that may emphasize the broad shoulders.\nSuits:\nTailored suits with structured shoulers and a defined waist, Blazers with waist suppression and avoid boxy or shapeless styles.\n\nAccessories For Both the Genders:\nBelts worn at the waist to define the silhouette, Statment jwellery to draw attention downward, Scarves or ties to add interest to the lower body and avoid bulky shoulder bags or accessories that emphasize the shoulders.";
+                      } else {
+                        bodyType = "Please Check your Measurements!";
+                      }
+
+                      document.getElementById("result").innerText =
+                        "Your body type is: " + bodyType;
+
+                      document.getElementById("descp").innerText =
+                        "For those blessed with" + " " + bodyType + " " + descp;
+                      document.getElementById("bodyTypeImage").src = imageSrc;
+                    } else {
+                      alert("Please fill in all measurements.");
+                    }
+                  }
+                </script>
+              </main>
+              <body>
+                <!-- Site footer -->
+                <footer class="site-footer">
+                  <div class="container">
+                    <div class="row">
+                      <div class="About">
+                        <h6>About</h6>
+                        <p class="text-justify">
+                          Welcome to <i>Sophistquee</i>, your go-to source for
+                          all things fashion! <br />
+                          Founded by Prachi and Isha, we're passionate about
+                          helping you discover your unique style. From the
+                          latest trends to timeless classics, we're here to
+                          inspire and empower you on your fashion journey.
+                          <br />
+                          Join us as we explore the art of self-expression
+                          through style, and let's make fashion fun and
+                          accessible for everyone!
+                          <br />
+                          <br />
+                          Contact Us: <br />
+                          isha.sharma@christcollegepune.org <br />
+                          prachi.agarwal@christcollegepune.org
+                        </p>
+                      </div>
+
+                      <div class="Categories">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                          <li>
+                            <a href="/trial.html" target="_blank">Home</a>
+                          </li>
+                          <li>
+                            <a
+                              href="/PalettePro/PalettePro.html"
+                              target="_blank"
+                              >Palette Pro</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/KnowYourBody.html" target="_blank"
+                              >Know Your Body</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/Essentials/Essentials.html"
+                              target="_blank"
+                              >Essentials</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/Seasonals/Seasonal.html" target="_blank"
+                              >Seasonals</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/FashionVocab.html" target="_blank"
+                              >Fashion Vocab</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="Quick Links">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                          <li>
+                            <a href="/ABOUTUS.html" target="_blank">About Us</a>
+                          </li>
+                          <li>
+                            <a href="/RateUs.html" target="_blank">Rate Us</a>
+                          </li>
+                          <li>
+                            <a href="/Feedback.html" target="_blank"
+                              >Feedback</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/Signup.html" target="_blank"
+                              >Sign up/Sign in</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/Get_Premium.html" target="_blank"
+                              >Get Premium</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">
+                          Copyright &copy; 2023 All Rights Reserved.
+                        </p>
+                      </div>
+
+                      <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="footer-social-icons">
+                          <li>
+                            <a class="facebook" href="#">
+                              <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="pinterest" href="#"
+                              ><i class="fa-brands fa-pinterest-p"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a class="dribbble" href="#">
+                              <i class="fa-brands fa-instagram"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a class="linkedin" href="#"
+                              ><i class="fa-brands fa-twitter"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+              </body>
+            </section>
+          </li>
+        </ul>
+      </div>
+    </header>
+  </body>
+</html>

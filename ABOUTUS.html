@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/homepage-main.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
+    <link rel="stylesheet" href="CSS/sidebar.css" />
+    <link rel="stylesheet" href="CSS/signup-button.css" />
+    <title>About Us</title>
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      main {
+        background-color: #874a5b;
+      }
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+
+      .about-section {
+        padding: 100px;
+        text-align: center;
+        background-color: #474e5d;
+        color: white;
+      }
+
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .button:hover {
+        background-color: #555;
+      }
+
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="sidebar close">
+        <div class="logo-details">
+          <span class="logo_name">Sophistiquée</span>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <div class="iocn-link">
+              <a href="trial.html">
+                <i class="fa-solid fa-house-user"></i>
+
+                <span class="link_name">Home</span>
+              </a>
+              <i class="bx bxs-chevron-down arrow"></i>
+            </div>
+            <ul class="sub-menu">
+              <li><a class="link_name" href="Home.html">Home</a></li>
+              <li><a href="Womanss.html">Women's</a></li>
+              <li><a href="#">Men's</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="Essentials.html" target="_blank">
+              <i class="fa-solid fa-shirt"></i>
+              <span class="link_name">Wardrobe Essentials</span>
+            </a>
+          </li>
+          <li>
+            <a href="Seasonal.html" target="_blank">
+              <i class="fa-regular fa-snowflake"></i>
+              <span class="link_name">Seasonals</span>
+            </a>
+          </li>
+          <li>
+            <a href="PalettePro.html" target="_blank">
+              <i class="fa-solid fa-palette"></i>
+              <span class="link_name">PalettePro</span>
+            </a>
+          </li>
+          <li>
+            <a href="KnowYourBody.html" target="_blank">
+              <i class="fa-solid fa-child"></i>
+              <span class="link_name">KnowYourBody</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="profile-details">
+              <div class="profile-content">
+                <!--<img src="image/profile.jpg" alt="profileImg">-->
+              </div>
+              <div class="name-job">
+                <div class="profile_name">Sign up</div>
+                <div class="job">Web Desginer</div>
+              </div>
+              <li>
+                <div class="profile-details">
+                  <div class="profile-content">
+                    <!--<img src="image/profile.jpg" alt="profileImg">-->
+                  </div>
+                  <div class="name-job">
+                    <div class="profile_name">Sign up</div>
+                    <div class="job">Fashion Assistant</div>
+                  </div>
+                  <i class="bx bx-log-out"></i>
+                </div>
+              </li>
+            </div>
+            <!-- Sidebar toggle button (cross icon) -->
+            <div class="sidebar-toggle">
+              <i class="fa-solid fa-xmark fa-2xl" style="color: #fff"></i>
+            </div>
+
+            <section class="home-section">
+              <div class="home-content">
+                <i class="bx bx-menu"></i>
+                <i
+                  class="fa-solid fa-magnifying-glass fa-lg"
+                  style="color: #f9f5f5"
+                ></i>
+                <div class="website-name">
+                  <h1>Sophistiquée</h1>
+                </div>
+                <div class="button">
+                  <a href="Signup.html">
+                    <button>
+                      <span>Sign Up</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+              <div class="social-media-buttons">
+                <main></main>
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    let arrow = document.querySelectorAll(".arrow");
+                    for (let i = 0; i < arrow.length; i++) {
+                      arrow[i].addEventListener("click", (e) => {
+                        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                        arrowParent.classList.toggle("showMenu");
+                      });
+                    }
+
+                    let sidebar = document.querySelector(".sidebar");
+                    let sidebarBtn = document.querySelectorAll(
+                      ".bx-menu, .sidebar-toggle"
+                    );
+                    for (let i = 0; i < sidebarBtn.length; i++) {
+                      sidebarBtn[i].addEventListener("click", () => {
+                        sidebar.classList.toggle("close");
+
+                        // Add a delay before showing/hiding the cross icon
+                        setTimeout(function () {
+                          let crossIcon =
+                            document.querySelector(".sidebar-toggle");
+                          if (sidebar.classList.contains("close")) {
+                            crossIcon.style.display = "none";
+                          } else {
+                            crossIcon.style.display = "block";
+                          }
+                        }, 200); // Adjust the delay time (in milliseconds) as needed
+
+                        let homeContent =
+                          document.querySelector(".home-section");
+                        if (sidebar.classList.contains("close")) {
+                          homeContent.classList.remove("blurred");
+                        } else {
+                          homeContent.classList.add("blurred");
+                        }
+                      });
+                    }
+                  });
+                </script>
+              </div>
+              <main>
+                <div class="about-section">
+                  <h1>About Us Page</h1>
+                  <p>
+                    Welcome to Sophistquee, your ultimate destination for all
+                    things fashion and style! We are here to revolutionize the
+                    way you shop and dress, offering personalized outfit
+                    suggestions tailored just for you.
+                  </p>
+
+                  <p>
+                    At Sophistquee, we understand that fashion is not just about
+                    following trends; it's about expressing your unique style
+                    and personality. Whether you're looking for the perfect
+                    outfit for a special occasion or simply want to update your
+                    wardrobe with the latest trends, we've got you covered.
+                  </p>
+
+                  <p>
+                    Our team of fashion experts carefully curates outfit ideas
+                    based on the latest trends, your body type, and color
+                    preferences. We also provide tips and advice on building a
+                    versatile wardrobe with essential pieces that will never go
+                    out of style.
+                  </p>
+
+                  <p>
+                    But that's not all! We also take inspiration from your
+                    favorite celebrities, showcasing their most iconic looks and
+                    helping you find similar outfits at affordable prices.
+                  </p>
+
+                  <p>
+                    So why wait? Join the Sophistquee community today and
+                    discover a whole new world of fashion possibilities!
+                  </p>
+                </div>
+
+                <h2 style="text-align: center">Our Team</h2>
+                <div class="row">
+                  <div class="column">
+                    <div class="card">
+                      <img src="PRACHI.jpeg" alt="Prachi" style="width: 50%" />
+                      <div class="container">
+                        <h2>Prachi Agarwal</h2>
+                        <p class="title">CEO & Founder</p>
+                        <p>
+                          As the CEO of Sophistquee, Prachi leads our team with
+                          a passion for fashion and a vision for creating a
+                          platform that revolutionizes how people discover and
+                          explore new styles. With her extensive experience in
+                          Fashion, she is dedicated to ensuring that Sophistquee
+                          delivers the best-in-class fashion recommendations
+                          tailored to our users' needs.
+                        </p>
+                        <p>prachi@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="column">
+                    <div class="card">
+                      <img src="ISHA.jpeg" alt="Isha" style="width: 50%" />
+                      <div class="container">
+                        <h2>Isha Sharma</h2>
+                        <p class="title">Lead Designer and Programmerr</p>
+                        <p>
+                          As the Lead Programmer at Sophistquee, Isha plays a
+                          pivotal role in bringing our fashion platform to life.
+                          With a wealth of experience and a passion for creating
+                          seamless user experiences, she oversees the technical
+                          development of our website, ensuring that it is not
+                          only visually stunning but also functional and
+                          user-friendly.
+                        </p>
+                        <p>isha@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </main>
+              <body>
+                                <!-- Site footer -->
+                                <footer class="site-footer">
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="About">
+                                        <h6>About</h6>
+                                        <p class="text-justify">
+                                          Welcome to <i>Sophistquee</i>, your go-to source for
+                                          all things fashion! <br />
+                                          Founded by Prachi and Isha, we're passionate about
+                                          helping you discover your unique style. From the
+                                          latest trends to timeless classics, we're here to
+                                          inspire and empower you on your fashion journey.
+                                          <br />
+                                          Join us as we explore the art of self-expression
+                                          through style, and let's make fashion fun and
+                                          accessible for everyone!
+                                          <br />
+                                          <br />
+                                          Contact Us: <br />
+                                          isha.sharma@christcollegepune.org <br />
+                                          prachi.agarwal@christcollegepune.org
+                                        </p>
+                                      </div>
+                
+                                      <div class="Categories">
+                                        <h6>Categories</h6>
+                                        <ul class="footer-links">
+                                          <li>
+                                            <a href="/trial.html" target="_blank">Home</a>
+                                          </li>
+                                          <li>
+                                            <a
+                                              href="/PalettePro/PalettePro.html"
+                                              target="_blank"
+                                              >Palette Pro</a
+                                            >
+                                          </li>
+                                          <li>
+                                            <a href="/KnowYourBody.html" target="_blank"
+                                              >Know Your Body</a
+                                            >
+                                          </li>
+                                          <li>
+                                            <a
+                                              href="/Essentials/Essentials.html"
+                                              target="_blank"
+                                              >Essentials</a
+                                            >
+                                          </li>
+                                          <li>
+                                            <a href="/Seasonals/Seasonal.html" target="_blank"
+                                              >Seasonals</a
+                                            >
+                                          </li>
+                                          <li>
+                                            <a href="/FashionVocab.html" target="_blank"
+                                              >Fashion Vocab</a
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                
+                                      <div class="Quick Links">
+                                        <h6>Quick Links</h6>
+                                        <ul class="footer-links">
+                                          <li>
+                                            <a href="/ABOUTUS.html" target="_blank">About Us</a>
+                                          </li>
+                                          <li>
+                                            <a href="/RateUs.html" target="_blank">Rate Us</a>
+                                          </li>
+                                          <li>
+                                            <a href="/Feedback.html" target="_blank"
+                                              >Feedback</a
+                                            >
+                                          </li>
+                                          <li>
+                                            <a href="/Signup.html" target="_blank"
+                                              >Sign up/Sign in</a
+                                            >
+                                          </li>
+                                          <li>
+                                            <a href="/Get_Premium.html" target="_blank"
+                                              >Get Premium</a
+                                            >
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <hr />
+                                  </div>
+                                  <div class="container">
+                                    <div class="row">
+                                      <div class="col-md-8 col-sm-6 col-xs-12">
+                                        <p class="copyright-text">
+                                          Copyright &copy; 2023 All Rights Reserved.
+                                        </p>
+                                      </div>
+                
+                                      <div class="col-md-4 col-sm-6 col-xs-12">
+                                        <ul class="footer-social-icons">
+                                          <li>
+                                            <a class="facebook" href="#">
+                                              <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a class="pinterest" href="#"
+                                              ><i class="fa-brands fa-pinterest-p"></i
+                                            ></a>
+                                          </li>
+                                          <li>
+                                            <a class="dribbble" href="#">
+                                              <i class="fa-brands fa-instagram"></i
+                                            ></a>
+                                          </li>
+                                          <li>
+                                            <a class="linkedin" href="#"
+                                              ><i class="fa-brands fa-twitter"></i
+                                            ></a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </footer>
+              </body>
+            </section>
+          </li>
+        </ul>
+      </div>
+    </header>
+  </body>
+</html>

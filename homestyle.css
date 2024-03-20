@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 10px;
+}
+h2 {
+  color: white;
+  margin-top: 25px;
+  margin-left: 65px;
+  font-size: 35px;
+}
+main {
+  background-color: rgba(0,0,0,0.9);
+}
+.main-img {
+  margin: 30px;
+}
+header {
+  text-align: center;
+  padding: 0.7em;
+  width: auto;
+  display: flex;
+}
+h1 {
+  color: #333;
+  margin-top: -65px;
+  font-style: italic;
+  font-family:"Operator Mono, Fira Code iScript, Menlo, Monaco, 'Courier New', monospace";
+}
+.social-icons {
+  position: absolute;
+  top: 0.4em;
+  right: 20px;
+  display: flex;
+  align-items: center;
+}
+.social-icons a {
+  margin: 37px 15px;
+  text-decoration: none;
+  color: #333;
+}
+.signup-button {
+  position: relative;
+  overflow: hidden;
+  height: 3.5rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #bfbfbf;
+  background-size: 400%;
+  color: black;
+  margin: -15px 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.signup-button:hover {
+  background-color: grey;
+}
+.outfit1 {
+  color: white;
+  justify-content: space-evenly;
+  display: flex;
+}
+.outfit2 {
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  justify-content: space-evenly;
+  display: flex;
+}
+footer {
+  justify-content: space-evenly;
+  display: flex;
+}
+ul {
+  display: flex;
+}
+footer p {
+  color: black;
+  font-size: 1.2rem;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #333;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    line-height: 10px;
+  }
+  .signup-button {
+    font-size: 8px;
+    padding: 5px 5px;
+    margin-top: -15px;
+    margin-right: -8px;
+  }
+  footer {
+    width: 10%;
+    height: 100px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/homepage-main.css" />
+    <link rel="stylesheet" href="../CSS/footer.css" />
+    <link rel="stylesheet" href="../CSS/sidebar.css" />
+    <link rel="stylesheet" href="../CSS/signup-button.css" />
+    <title>PalettePro</title>
+    <!-- Boxiocns CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .clr-analysis {
+        color: brown;
+        padding-top: 1%;
+      }
+
+      .description > h2 {
+        font-size: 2rem;
+        margin-top: 4%;
+        margin-right: 10%;
+        margin-left: 6%;
+      }
+      .description > p {
+        font-size: 1.2rem;
+        margin-right: 10%;
+        margin-left: 6%;
+      }
+      .complexionImages {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1%;
+        padding-bottom: 10%;
+      }
+
+      main {
+        background-color: rgba(251, 243, 241, 255);
+      }
+      .box {
+        background-color: rgba(251, 243, 241, 255);
+        display: flex;
+      }
+      .check > button {
+        background-color: #e3cdbc;
+        align-items: center;
+        justify-content: center;
+        color: #874a5b;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 20%;
+        margin-top: 4%;
+        margin-bottom: 5%;
+        margin-left: 40%;
+      }
+      check:hover {
+        background-color: #45a049;
+      }
+      .cool {
+        background-color: #d3b683;
+      }
+      .neutral {
+        background-color: #b78876;
+      }
+      .warm {
+        background-color: #b5651d;
+      }
+    </style>
+    <body>
+      <header>
+        <div class="sidebar close">
+          <div class="logo-details">
+            <span class="logo_name">Sophistiquée</span>
+          </div>
+          <ul class="nav-links">
+            <li>
+              <div class="iocn-link">
+                <a href="trial.html">
+                  <i class="fa-solid fa-house-user"></i>
+                  <span class="link_name">Home</span>
+                </a>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <ul class="sub-menu">
+                <li><a class="link_name" href="Home.html">Home</a></li>
+                <li><a href="Womanss.html">Women's</a></li>
+                <li><a href="#">Men's</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="Essentials.html" target="_blank">
+                <i class="fa-solid fa-shirt"></i>
+                <span class="link_name">Wardrobe Essentials</span>
+              </a>
+            </li>
+            <li>
+              <a href="Seasonal.html" target="_blank">
+                <i class="fa-regular fa-snowflake"></i>
+                <span class="link_name">Seasonals</span>
+              </a>
+            </li>
+            <li>
+              <a href="PalettePro.html" target="_blank">
+                <i class="fa-solid fa-palette"></i>
+                <span class="link_name">PalettePro</span>
+              </a>
+            </li>
+            <li>
+              <a href="KnowYourBody.html" target="_blank">
+                <i class="fa-solid fa-child"></i>
+                <span class="link_name">KnowYourBody</span>
+              </a>
+            </li>
+
+            <li>
+              <div class="profile-details">
+                <div class="profile-content">
+                  <!--<img src="image/profile.jpg" alt="profileImg">-->
+                </div>
+                <div class="name-job">
+                  <div class="profile_name">Sign up</div>
+                  <div class="job">Web Desginer</div>
+                </div>
+                <li>
+                  <div class="profile-details">
+                    <div class="profile-content">
+                      <!--<img src="image/profile.jpg" alt="profileImg">-->
+                    </div>
+                    <div class="name-job">
+                      <div class="profile_name">Sign up</div>
+                      <div class="job">Fashion Assistant</div>
+                    </div>
+                    <i class="bx bx-log-out"></i>
+                  </div>
+                </li>
+              </div>
+              <!-- Sidebar toggle button (cross icon) -->
+              <div class="sidebar-toggle">
+                <i class="fa-solid fa-xmark fa-2xl" style="color: #fff"></i>
+              </div>
+              <section class="home-section">
+                <div class="home-content">
+                  <i class="bx bx-menu"></i>
+
+                  <div class="website-name">
+                    <h1>Sophistiquée</h1>
+                  </div>
+                  <div class="button">
+                    <a href="Signup.html">
+                      <button>
+                        <span>Sign Up</span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="social-media-buttons">
+                  <main></main>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      let arrow = document.querySelectorAll(".arrow");
+                      for (let i = 0; i < arrow.length; i++) {
+                        arrow[i].addEventListener("click", (e) => {
+                          let arrowParent =
+                            e.target.parentElement.parentElement; //selecting main parent of arrow
+                          arrowParent.classList.toggle("showMenu");
+                        });
+                      }
+
+                      let sidebar = document.querySelector(".sidebar");
+                      let sidebarBtn = document.querySelectorAll(
+                        ".bx-menu, .sidebar-toggle"
+                      );
+                      for (let i = 0; i < sidebarBtn.length; i++) {
+                        sidebarBtn[i].addEventListener("click", () => {
+                          sidebar.classList.toggle("close");
+
+                          // Add a delay before showing/hiding the cross icon
+                          setTimeout(function () {
+                            let crossIcon =
+                              document.querySelector(".sidebar-toggle");
+                            if (sidebar.classList.contains("close")) {
+                              crossIcon.style.display = "none";
+                            } else {
+                              crossIcon.style.display = "block";
+                            }
+                          }, 200); // Adjust the delay time (in milliseconds) as needed
+
+                          let homeContent =
+                            document.querySelector(".home-section");
+                          if (sidebar.classList.contains("close")) {
+                            homeContent.classList.remove("blurred");
+                          } else {
+                            homeContent.classList.add("blurred");
+                          }
+                        });
+                      }
+                    });
+                  </script>
+                </div>
+
+                <main>
+                  <div class="clr-analysis">
+                    <div class="description">
+                      <h2>
+                        PalettePro - Color Analysis: Unleash Your Radiance
+                      </h2>
+                      <br />
+                      <p>
+                        Enhance your style effortlessly with
+                        <i> PalettePro's </i>
+                        groundbreaking color analysis feature. Bid farewell to
+                        fashion dilemmas and embrace effortless sophistication.
+                        Explore the shades that amplify your innate beauty and
+                        illuminate your presence. Connect with PalettePro and
+                        ignite your brilliance today. Embrace self-assurance
+                        with every ensemble, and step into a realm where your
+                        fashion communicates boldly without a single word.Let
+                        PalettePro be your guide to a wardrobe that reflects
+                        your true essence and leaves a lasting impression
+                        wherever you go.
+                      </p>
+                    </div>
+                    <div class="check">
+                      <button type="button" onclick="displayComplexionImages()">
+                        Select your Skin Complexion
+                      </button>
+                    </div>
+                  </div>
+                  <div class="complexionImages">
+                    <img src="" alt="" width="35%" />
+                    <!-- The images will be added dynamically through JavaScript -->
+                  </div>
+
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      // Function to display images
+                      function displayComplexionImages() {
+                        var imagesContainer =
+                          document.querySelector(".complexionImages");
+                        imagesContainer.innerHTML = ""; // Clear previous images
+
+                        // Array of image URLs and their names
+                        var images = [
+                          {
+                            src: "https://i.pinimg.com/564x/24/58/71/24587152f20c5f19b7a22d0d5cf1cd49.jpg",
+                            name: "Cool",
+                          },
+                          {
+                            src: "https://i.pinimg.com/564x/ec/10/f9/ec10f96a0d3736918b53a9da7ccc8590.jpg",
+                            name: "Neutral",
+                          },
+                          {
+                            src: "https://i.pinimg.com/564x/c4/6d/6b/c46d6b5f8b8bb1ae1defd9206a02aefc.jpg",
+                            name: "Warm",
+                          },
+                        ];
+
+                        // Create and append the images with text
+                        images.forEach(function (imageInfo) {
+                          var imageContainer = document.createElement("div");
+                          imageContainer.style.textAlign = "center"; // Align text to the center
+                          imageContainer.style.marginBottom = "20px"; // Add margin below each image container
+
+                          var imageName = document.createElement("p");
+                          imageName.textContent = imageInfo.name;
+                          imageName.style.fontSize = "2rem"; // Set font size
+                          imageName.style.color = "#874a5b"; // Set text color
+                          imageName.style.marginBottom = "5px"; // Add margin below text
+
+                          var image = document.createElement("img");
+                          image.src = imageInfo.src;
+                          image.alt = imageInfo.name;
+                          image.width = "200";
+                          image.height = "200";
+                          imageContainer.appendChild(imageName);
+                          imageContainer.appendChild(image);
+                          imagesContainer.appendChild(imageContainer);
+                        });
+                      }
+
+                      // Event listener for the button click
+                      var selectButton =
+                        document.querySelector(".check > button");
+                      selectButton.addEventListener(
+                        "click",
+                        displayComplexionImages
+                      );
+                    });
+                  </script>
+                </main>
+                <!-- Site footer -->
+                <footer class="site-footer">
+                  <div class="container">
+                    <div class="row">
+                      <div class="About">
+                        <h6>About</h6>
+                        <p class="text-justify">
+                          Welcome to <i>Sophistquee</i>, your go-to source for
+                          all things fashion! <br />
+                          Founded by Prachi and Isha, we're passionate about
+                          helping you discover your unique style. From the
+                          latest trends to timeless classics, we're here to
+                          inspire and empower you on your fashion journey.
+                          <br />
+                          Join us as we explore the art of self-expression
+                          through style, and let's make fashion fun and
+                          accessible for everyone!
+                          <br />
+                          <br />
+                          Contact Us: <br />
+                          isha.sharma@christcollegepune.org <br />
+                          prachi.agarwal@christcollegepune.org
+                        </p>
+                      </div>
+
+                      <div class="Categories">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                          <li>
+                            <a href="/trial.html" target="_blank">Home</a>
+                          </li>
+                          <li>
+                            <a
+                              href="/PalettePro/PalettePro.html"
+                              target="_blank"
+                              >Palette Pro</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/KnowYourBody.html" target="_blank"
+                              >Know Your Body</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="/Essentials/Essentials.html"
+                              target="_blank"
+                              >Essentials</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/Seasonals/Seasonal.html" target="_blank"
+                              >Seasonals</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/FashionVocab.html" target="_blank"
+                              >Fashion Vocab</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="Quick Links">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                          <li>
+                            <a href="/ABOUTUS.html" target="_blank">About Us</a>
+                          </li>
+                          <li>
+                            <a href="/RateUs.html" target="_blank">Rate Us</a>
+                          </li>
+                          <li>
+                            <a href="/Feedback.html" target="_blank"
+                              >Feedback</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/Signup.html" target="_blank"
+                              >Sign up/Sign in</a
+                            >
+                          </li>
+                          <li>
+                            <a href="/Get_Premium.html" target="_blank"
+                              >Get Premium</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">
+                          Copyright &copy; 2023 All Rights Reserved.
+                        </p>
+                      </div>
+
+                      <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="footer-social-icons">
+                          <li>
+                            <a class="facebook" href="#">
+                              <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="pinterest" href="#"
+                              ><i class="fa-brands fa-pinterest-p"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a class="dribbble" href="#">
+                              <i class="fa-brands fa-instagram"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a class="linkedin" href="#"
+                              ><i class="fa-brands fa-twitter"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+              </section>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </body>
+  </head>
+</html>
