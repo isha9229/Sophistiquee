@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,6 +9,8 @@
     <link rel="stylesheet" href="CSS/footer.css" />
     <link rel="stylesheet" href="CSS/sidebar.css" />
     <link rel="stylesheet" href="CSS/signup-button.css" />
+    <link rel="stylesheet" href="CSS/womans.css" />
+    <script src="script.js"></script>
 
     <title>Sophistiquée</title>
     <!-- Boxiocns CDN Link -->
@@ -47,7 +50,7 @@
             <ul class="sub-menu">
               <li><a class="link_name" href="Home.html">Home</a></li>
               <li><a href="Womanss.html">Women's</a></li>
-              <li><a href="#">Men's</a></li>
+              <li><a href="Mens.html">Men's</a></li>
             </ul>
           </li>
 
@@ -59,7 +62,7 @@
           </li>
           <li>
             <div class="iocn-link">
-              <a href="Seasonals/Seasonal.html">
+              <a href="Seasonals/Seasonal.html" target="_blank">
                 <i class="fa-solid fa-house-user"></i>
 
                 <span class="link_name">Seasonals</span>
@@ -72,11 +75,11 @@
                   >Seasonals</a
                 >
               </li>
-              <li><a href="Seasonals/Winter.html">Winter</a></li>
-              <li><a href="Seasonals/Summer.html">Summer</a></li>
-              <li><a href="Seasonals/Monsoon.html">Monsoon</a></li>
-              <li><a href="Seasonals/Spring.html">Spring</a></li>
-              <li><a href="Seasonals/Autumn.html">Autumn</a></li>
+              <li><a href="Seasonals/Winter.html" target="_blank">Winter</a></li>
+              <li><a href="Seasonals/Summer.html" target="_blank">Summer</a></li>
+              <li><a href="Seasonals/Monsoon.html" target="_blank">Monsoon</a></li>
+              <li><a href="Seasonals/Spring.html" target="_blank">Spring</a></li>
+              <li><a href="Seasonals/Autumn.html" target="_blank">Autumn</a></li>
             </ul>
           </li>
           <li>
@@ -136,57 +139,6 @@
 
               <div class="social-media-buttons">
                 <div class="overlay" id="overlay"></div>
-                <main></main>
-                <script>
-                  document.addEventListener("DOMContentLoaded", function () {
-                    let arrow = document.querySelectorAll(".arrow");
-                    for (let i = 0; i < arrow.length; i++) {
-                      arrow[i].addEventListener("click", (e) => {
-                        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
-                        arrowParent.classList.toggle("showMenu");
-                      });
-                    }
-
-                    let sidebar = document.querySelector(".sidebar");
-                    let sidebarBtn = document.querySelectorAll(
-                      ".bx-menu, .sidebar-toggle"
-                    );
-                    for (let i = 0; i < sidebarBtn.length; i++) {
-                      sidebarBtn[i].addEventListener("click", () => {
-                        sidebar.classList.toggle("close");
-
-                        // Add a delay before showing/hiding the cross icon
-                        setTimeout(function () {
-                          let crossIcon =
-                            document.querySelector(".sidebar-toggle");
-                          if (sidebar.classList.contains("close")) {
-                            crossIcon.style.display = "none";
-                          } else {
-                            crossIcon.style.display = "block";
-                          }
-                        }, 200); // Adjust the delay time (in milliseconds) as needed
-
-                        const overlay = document.getElementById("overlay");
-
-                        function openSidebar() {
-                          overlay.style.display = "block";
-                        }
-
-                        function closeSidebar() {
-                          overlay.style.display = "none";
-                        }
-
-                        let homeContent =
-                          document.querySelector(".home-section");
-                        if (sidebar.classList.contains("close")) {
-                          homeContent.classList.remove("blurred");
-                        } else {
-                          homeContent.classList.add("blurred");
-                        }
-                      });
-                    }
-                  });
-                </script>
               </div>
 
               <main>
@@ -214,135 +166,123 @@
                 </div>
               </main>
 
-              <body>
-                <!-- Site footer -->
-                <footer class="site-footer">
-                  <div class="container">
-                    <div class="row">
-                      <div class="About">
-                        <h6>About</h6>
-                        <p class="text-justify">
-                          Welcome to <i>Sophistquee</i>, your go-to source for
-                          all things fashion! <br />
-                          Founded by Prachi and Isha, we're passionate about
-                          helping you discover your unique style. From the
-                          latest trends to timeless classics, we're here to
-                          inspire and empower you on your fashion journey.
-                          <br />
-                          Join us as we explore the art of self-expression
-                          through style, and let's make fashion fun and
-                          accessible for everyone!
-                          <br />
-                          <br />
-                          Contact Us: <br />
-                          isha.sharma@christcollegepune.org <br />
-                          prachi.agarwal@christcollegepune.org
-                        </p>
-                      </div>
-
-                      <div class="Categories">
-                        <h6>Categories</h6>
-                        <ul class="footer-links">
-                          <li>
-                            <a href="/trial.html" target="_blank">Home</a>
-                          </li>
-                          <li>
-                            <a
-                              href="/PalettePro/PalettePro.html"
-                              target="_blank"
-                              >Palette Pro</a
-                            >
-                          </li>
-                          <li>
-                            <a href="/KnowYourBody.html" target="_blank"
-                              >Know Your Body</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="/Essentials/Essentials.html"
-                              target="_blank"
-                              >Essentials</a
-                            >
-                          </li>
-                          <li>
-                            <a href="/Seasonals/Seasonal.html" target="_blank"
-                              >Seasonals</a
-                            >
-                          </li>
-                          <li>
-                            <a href="/FashionVocab.html" target="_blank"
-                              >Fashion Vocab</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="Quick Links">
-                        <h6>Quick Links</h6>
-                        <ul class="footer-links">
-                          <li>
-                            <a href="/ABOUTUS.html" target="_blank">About Us</a>
-                          </li>
-                          <li>
-                            <a href="/RateUs.html" target="_blank">Rate Us</a>
-                          </li>
-                          <li>
-                            <a href="/Feedback.html" target="_blank"
-                              >Feedback</a
-                            >
-                          </li>
-                          <li>
-                            <a href="/Signup.html" target="_blank"
-                              >Sign up/Sign in</a
-                            >
-                          </li>
-                          <li>
-                            <a href="/Get_Premium.html" target="_blank"
-                              >Get Premium</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
+              <!-- Site footer -->
+              <footer class="site-footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="About">
+                      <h6>About</h6>
+                      <p class="text-justify">
+                        Welcome to <i>Sophistquee</i>, your go-to source for all
+                        things fashion! <br />
+                        Founded by Prachi and Isha, we're passionate about
+                        helping you discover your unique style. From the latest
+                        trends to timeless classics, we're here to inspire and
+                        empower you on your fashion journey.
+                        <br />
+                        Join us as we explore the art of self-expression through
+                        style, and let's make fashion fun and accessible for
+                        everyone!
+                        <br />
+                        <br />
+                        Contact Us: <br />
+                        isha.sharma@christcollegepune.org <br />
+                        prachi.agarwal@christcollegepune.org
+                      </p>
                     </div>
-                    <hr />
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-8 col-sm-6 col-xs-12">
-                        <p class="copyright-text">
-                          Copyright &copy; 2023 All Rights Reserved.
-                        </p>
-                      </div>
 
-                      <div class="col-md-4 col-sm-6 col-xs-12">
-                        <ul class="footer-social-icons">
-                          <li>
-                            <a class="facebook" href="#">
-                              <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                          </li>
-                          <li>
-                            <a class="pinterest" href="#"
-                              ><i class="fa-brands fa-pinterest-p"></i
-                            ></a>
-                          </li>
-                          <li>
-                            <a class="dribbble" href="#">
-                              <i class="fa-brands fa-instagram"></i
-                            ></a>
-                          </li>
-                          <li>
-                            <a class="linkedin" href="#"
-                              ><i class="fa-brands fa-twitter"></i
-                            ></a>
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="Categories">
+                      <h6>Categories</h6>
+                      <ul class="footer-links">
+                        <li>
+                          <a href="/trial.html" target="_blank">Home</a>
+                        </li>
+                        <li>
+                          <a href="/PalettePro/PalettePro.html" target="_blank"
+                            >Palette Pro</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/KnowYourBody.html" target="_blank"
+                            >Know Your Body</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Essentials/Essentials.html" target="_blank"
+                            >Essentials</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Seasonals/Seasonal.html" target="_blank"
+                            >Seasonals</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/FashionVocab.html" target="_blank"></a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="Quick Links">
+                      <h6>Quick Links</h6>
+                      <ul class="footer-links">
+                        <li>
+                          <a href="/ABOUTUS.html" target="_blank">About Us</a>
+                        </li>
+                        <li>
+                          <a href="/RateUs.html" target="_blank"></a>
+                        </li>
+                        <li>
+                          <a href="/Feedback.html" target="_blank">Feedback</a>
+                        </li>
+                        <li>
+                          <a href="/http://localhost:4000/" target="_blank"
+                            >Sign up/Sign in</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/Get_Premium.html" target="_blank"></a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                </footer>
-              </body>
+                  <hr />
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                      <p class="copyright-text">
+                        Copyright &copy; 2023 All Rights Reserved.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                      <ul class="footer-social-icons">
+                        <li>
+                          <a class="facebook" href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="pinterest" href="#"
+                            ><i class="fa-brands fa-pinterest-p"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="dribbble" href="#">
+                            <i class="fa-brands fa-instagram"></i
+                          ></a>
+                        </li>
+                        <li>
+                          <a class="linkedin" href="#"
+                            ><i class="fa-brands fa-twitter"></i
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </footer>
             </section>
           </li>
         </ul>
